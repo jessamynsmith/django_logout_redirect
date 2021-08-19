@@ -21,6 +21,7 @@ from myapp import views as myapp_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^logout/timeout/$', myapp_views.TimeoutLogoutView.as_view(), name='timeout_logout'),
     url('^accounts/', include('django.contrib.auth.urls')),
     url(r'index/$', myapp_views.IndexView.as_view(), name='index'),
 ]
